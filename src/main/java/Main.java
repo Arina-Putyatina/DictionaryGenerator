@@ -7,10 +7,10 @@ public class Main {
         final String text = "исходный текст для генерации словаря аборигенов";
 
         Function<String, String[]> splitWords = x -> x.split(" ");
-        SortWords(text, splitWords);
+        sortWords(text, splitWords);
     }
 
-    public static void SortWords(String text, Function<String, String[]> splitWords) {
+    public static void sortWords(String text, Function<String, String[]> splitWords) {
         Arrays.stream((splitWords.apply(text)))
                 .sorted()
                 .forEach(System.out::println);
